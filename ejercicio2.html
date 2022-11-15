@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2</title>
+</head>
+<?php
+    /* crear funcion que dada una cadena y un parametro booleano cursiva devuelve
+    un string con el codigo html que la muestra en negrita o cursiva.
+    AMPLIACION: 2 opciones extra : subrayado y otra de decoracion a nuestro gusto.
+   para poner el texto en cursiva<i>…</i>
+    para pasar a letra ngrita es <b>Este texto aparecerá escrito en negrita</b>
+    se utiliza para subrayaar una cadena <u>…</u>
+     para tachar el texto debemos poner <strike>…</strike>*/
+function palabra($cadena,$logico){
+    if ($logico==true){
+        echo "<bold>$cadena</bold>";
+    }
+    if ($logico == false ){
+        echo "<i>$cadena</i>";
+    }
+
+}
+    echo "Bienvenido usuario, le voy a transformar con estilos una cadena. Introduce la cadena: \n";
+    $cadena = fgets(STDIN);
+    echo "\n Ahora pásame si quieres que sea cursiva (opcion F) o en negrita (opcion T): (C/N)\n";
+    $logico = (boolean)fgets(STDIN);
+?>
+  </body>
+</html>
